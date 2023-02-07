@@ -3,10 +3,21 @@ function addItemOrcamento() {
     const orcamentos = document.getElementById("orcamentos");
     const orcamento = document.querySelector(".orcamento").cloneNode(true);
     const inputs = orcamento.querySelectorAll("input");
+
+    let totalValor = document.getElementById('valor');
+    let calcular = 0;
+    let resultado = document.getElementById('valorTotal');
+    
     inputs.forEach(input => {
+      let valor = totalValor.value;
+      calcular = calcular + parseFloat(valor);
+      resultado.innerHTML = "Total: " + calcular;
+    
       input.value = "";
     });
+    ;
     orcamentos.appendChild(orcamento);
+
   }
 
 //funcao para testar se os inputs estão sendo carregados corretamente
@@ -32,5 +43,3 @@ function addItemOrcamento() {
     //alert para testar se as informacoes são carregadas no array
     alert(`Nome: ${nome}\nPlaca: ${placa}\nModelo: ${modelo}\nCor: ${cor}\nTelefone: ${telefone}\nItens: ${JSON.stringify(itens)}`);
   }
-
-

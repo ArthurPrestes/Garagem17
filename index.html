@@ -17,40 +17,55 @@
       <h2>Oficina Garagem 17</h2>
   </div>
   </header>
-  <div class="container" style="border: 1px solid black; margin-top: 20px; padding-top: 10px;padding-bottom: 10px;">
+  <div class="container" style="border: 1px solid black; border-radius: 5px; margin-top: 20px; padding-top: 10px;padding-bottom: 10px;">
     <form>
+      <fieldset>
+        <legend>Dados do Cliente:</legend>
+      <div class="form-group">
         <label for="nome-cliente">Nome do Cliente:</label>
-        <input type="text" id="nome-cliente" name="nome-cliente"><br><br>
+        <input  type="text" class="form-control" id="nome-cliente" name="nome-cliente"><br><br>
       
         <label for="placa-carro">Placa do Carro:</label>
-        <input type="text" id="placa-carro" name="placa-carro"><br><br>
+        <input type="text" class="form-control" id="placa-carro" name="placa-carro"><br><br>
       
         <label for="modelo-carro">Modelo do Carro:</label>
-        <input type="text" id="modelo-carro" name="modelo-carro"><br><br>
+        <input type="text" class="form-control" id="modelo-carro" name="modelo-carro"><br><br>
       
         <label for="cor-carro">Cor do Carro:</label>
-        <input type="text" id="cor-carro" name="cor-carro"><br><br>
+        <input type="text" class="form-control" id="cor-carro" name="cor-carro"><br><br>
       
         <label for="telefone">Telefone para Contato:</label>
-        <input type="tel" id="telefone" name="telefone"><br><br>
+        <input type="tel" class="form-control" id="telefone" name="telefone"><br><br>
       
         <div id="orcamentos">
           <div class="orcamento">
+            <fieldset>
+            <legend>Itens:</legend>
             <label for="descricao">Descrição:</label>
-            <input type="text" id="descricao" name="descricao">
+            <input type="text" class="form-control" id="descricao" name="descricao">
       
             <label for="valor">Valor:</label>
-            <input type="text" id="valor" name="valor">
+            <input type="value" class="form-control" id="valor" name="valor">
+          </fieldset>
           </div>
         </div>
 
-        <!--Botao responsavel por add um novo item--> 
-        <button type="button" onclick="addItemOrcamento()">+ Adicionar Item</button>
-
+          
+        </div>
+      </fieldset>
       </form>
-      <button onclick="showInputs()">Mostrar Dados</button>
-      <button onclick="generatePDF()">generatePDF</button>
+      <!--Botao responsavel por add um novo item--> 
+      <button class="btn btn-primary" type="button" onclick="addItemOrcamento()">+ Adicionar Item</button>
+      <button class="btn btn-primary" onclick="showInputs()">Mostrar Dados</button>
+      <button class="btn btn-primary" onclick="generatePDF()">generatePDF</button>
+      <div>valor total: 
+        <span id="valorTotal"></span>
+      </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 </html>
