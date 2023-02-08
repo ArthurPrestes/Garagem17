@@ -5,3 +5,13 @@ body {
     width: 50%;
     margin: 0 auto;
 }
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.icon-color {
+    fill: rgb(255, 255, 255);
+}

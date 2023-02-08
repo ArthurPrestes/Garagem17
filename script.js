@@ -43,3 +43,13 @@ function addItemOrcamento() {
     //alert para testar se as informacoes são carregadas no array
     alert(`Nome: ${nome}\nPlaca: ${placa}\nModelo: ${modelo}\nCor: ${cor}\nTelefone: ${telefone}\nItens: ${JSON.stringify(itens)}`);
   }
+
+  //Responsavel por fazer o footer aparecer apenas quando a barra de rolagem for até em baixo
+  var footer = document.getElementById("myFooter");
+    window.onscroll = function() {
+      if (document.body.scrollTop > document.body.clientHeight || document.documentElement.scrollTop > document.documentElement.clientHeight) {
+        footer.style.display = "block";
+      } else {
+        footer.style.display = "none";
+      }
+  };
